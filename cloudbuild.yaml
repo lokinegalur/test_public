@@ -7,7 +7,5 @@ steps:
     - "-c"
     - |
         ls
-        git diff
-        git log
-        git branch
-        git diff --name-only HEAD~1 | awk -F "/*[^/]*/*$" '{ print ($1 == "" ? "." : $1); }' | sort | uniq
+        git diff --name-only HEAD~1 | awk -F "/*[^/]*/*$" '{ print ($1 == "" ? "." : $1); }' | sort | uniq > changed_dirs.txt
+        cat changed_dirs.txt
