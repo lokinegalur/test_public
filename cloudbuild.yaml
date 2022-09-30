@@ -10,3 +10,5 @@ steps:
         cat changed_dirs.txt
         git diff --diff-filter=AT --name-only HEAD~1 | awk -F "/*[^/]*/*$" '{ print ($1 == "" ? "." : $1); }' | sort | uniq > changed_dirs.txt
         cat changed_dirs.txt
+        git diff --diff-filter=ATD --name-only HEAD~1 | awk -F "/*[^/]*/*$" '{ print ($1 == "" ? "." : $1); }' | sort | uniq > changed_dirs.txt
+        cat changed_dirs.txt
