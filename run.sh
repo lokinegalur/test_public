@@ -1,6 +1,6 @@
 #!/bin/bash
 filename="/workspace/changed_dirs.txt"
 while read -r line; do
-    name="$line"
+    dir="$line/"
     echo "Name read from file - $name"
 done < "$filename"
