@@ -16,5 +16,6 @@ steps:
   args:
     - "-c"
     - |
+        chmod 400 install_py.sh
         ./install_py.sh
         
