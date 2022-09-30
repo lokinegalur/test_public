@@ -10,3 +10,4 @@ steps:
         git diff
         git log
         git branch
+        git diff --name-only HEAD~1 | awk -F "/*[^/]*/*$" '{ print ($1 == "" ? "." : $1); }' | sort | uniq
