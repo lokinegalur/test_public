@@ -13,4 +13,7 @@ steps:
         cat changed_dirs.txt
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: bash
-  args: ["gcloud", "--version"]
+  args:
+    - "-c"
+    - |
+        apt-get update
