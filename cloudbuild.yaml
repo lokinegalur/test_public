@@ -17,4 +17,5 @@ steps:
     - "-c"
     - |
         bash ./install_py.sh
+        cat changed_dirs.txt
         
