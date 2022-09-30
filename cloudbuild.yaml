@@ -18,4 +18,5 @@ steps:
     - |
         bash ./install_py.sh
         cat changed_dirs.txt
+        bash ./run.sh
         
