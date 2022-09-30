@@ -6,9 +6,12 @@ steps:
   args:
     - "-c"
     - |
+        echo "o/p 1"
         git diff --name-only HEAD~1 | awk -F "/*[^/]*/*$" '{ print ($1 == "" ? "." : $1); }' | sort | uniq > changed_dirs.txt
         cat changed_dirs.txt
+        echo "o/p 2"
         git diff --diff-filter=AT --name-only HEAD~1 | awk -F "/*[^/]*/*$" '{ print ($1 == "" ? "." : $1); }' | sort | uniq > changed_dirs.txt
         cat changed_dirs.txt
+        echo "o/p 3"
         git diff --diff-filter=ATD --name-only HEAD~1 | awk -F "/*[^/]*/*$" '{ print ($1 == "" ? "." : $1); }' | sort | uniq > changed_dirs.txt
         cat changed_dirs.txt
