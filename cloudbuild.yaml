@@ -4,9 +4,9 @@ steps:
 - name: gcr.io/cloud-builders/git
   entrypoint: bash
   args:
-    - c
+    - "c"
     - |
-    - ls
-    - git diff
-    - git log
-    - git branch
+        ls
+        git diff
+        git log
+        git branch
