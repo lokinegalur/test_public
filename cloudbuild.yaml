@@ -2,7 +2,7 @@ steps:
 - name: gcr.io/cloud-builders/git
   args: ['fetch', '--unshallow']
 - name: gcr.io/cloud-builders/git
-  entrypoint: /bin/bash
+  entrypoint: bash
   args:
     - c
     - |
