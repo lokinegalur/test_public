@@ -8,7 +8,7 @@ steps:
   args:
     - "-c"
     - |
-        git diff --diff-filter=AT --name-only HEAD~1 | awk -F "/*[^/]*/*$" '{ print ($1 == "" ? "." : $1); }' | sort | uniq > changed_dirs.txt
+        git diff --diff-filter=AM --name-only HEAD~1 | awk -F "/*[^/]*/*$" '{ print ($1 == "" ? "." : $1); }' | sort | uniq > changed_dirs.txt
         echo "The changed folders are"
         cat changed_dirs.txt
 # Install gcloud and Create template for all the changed folders
