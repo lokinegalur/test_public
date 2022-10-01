@@ -1,6 +1,6 @@
 #!/bin/bash
 filename="/workspace/changed_dirs.txt"
-while read -r line; do
+while IFS=$'\r' read -r line; do
     dir="$line"
     echo "new pipeline in - $dir"
     ls $dir
