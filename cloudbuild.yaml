@@ -11,22 +11,16 @@ steps:
         git diff --diff-filter=AT --name-only HEAD~1 | awk -F "/*[^/]*/*$" '{ print ($1 == "" ? "." : $1); }' | sort | uniq > changed_dirs.txt
         echo "The changed folders are"
         cat changed_dirs.txt
-# - name: gcr.io/cloud-builders/gcloud
-#   entrypoint: bash
-#   args:
-#     - "-c"
-#     - |
-#         bash ./install_py.sh
-#         cat changed_dirs.txt
-#         bash ./run.sh
+# Install gcloud and Create template for all the changed folders
 - name: python:3.8
   entrypoint: bash
   args:
     - "-c"
     - |
-        chmod +x ./install_py.sh
-        bash ./install_py.sh
+        export PYTHONDONTWRITEBYTECODE=1
+        chmod +x ./install_gcloud.sh
+        bash ./install_gcloud.sh
         cat changed_dirs.txt
         chmod +x ./run.sh
-        bash -x ./run.sh
+        bash ./run.sh
         
