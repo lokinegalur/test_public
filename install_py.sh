@@ -2,6 +2,7 @@
 echo "Installing python3.8"
 python -V
 pip3 --version
+pip --version
 apt-get update
 apt install software-properties-common
 add-apt-repository ppa:deadsnakes/ppa
