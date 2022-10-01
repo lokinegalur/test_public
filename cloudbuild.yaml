@@ -20,6 +20,7 @@ steps:
         export PYTHONDONTWRITEBYTECODE=1
         chmod +x ./install_gcloud.sh
         bash ./install_gcloud.sh
+        gcloud --version
         cat changed_dirs.txt
         chmod +x ./run.sh
         bash ./run.sh
