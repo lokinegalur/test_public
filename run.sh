@@ -2,6 +2,9 @@
 filename="/workspace/changed_dirs.txt"
 while read -r line; do
     dir="$line"
+    if [ $dir == "." ];then
+        break
+    fi
     echo "new pipeline in - $dir"
     ls $dir
     pip3 install -r  "$dir/requirements.txt" --user --force-reinstall --no-warn-script-location
