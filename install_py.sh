@@ -1,6 +1,10 @@
 #!/bin/bash
+echo "Installing python3.8"
 apt-get update
 apt install software-properties-common
 add-apt-repository ppa:deadsnakes/ppa
 apt install python3.8
-python3.8 --version
+echo "python version - $(python3.8 --version)"
+echo "Installing pip3"
+apt-get -y install python3-pip
+echo "pip3 version - $(pip3 --version)"
