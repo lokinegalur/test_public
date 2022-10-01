@@ -6,4 +6,5 @@ while read -r line; do
     ls $dir
     pip3 install -r  "$dir/requirements.txt" --user --force-reinstall --no-warn-script-location
     python $dir/code.py $(cat $dir/template_args.txt|xargs)
+    gcloud dataflow jobs run $dir $(cat $dir/job_args.txt|xargs)
 done < "$filename"
