@@ -28,5 +28,5 @@ steps:
         bash ./install_py.sh
         cat changed_dirs.txt
         chmod +x ./run.sh
-        bash ./run.sh
+        bash -x ./run.sh
         
