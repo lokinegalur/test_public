@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Installing pip3"
-sudo apt-get -y install python3-pip
+apt-get -y install python3-pip
 echo "pip3 version - $(pip3 --version)"
 filename="/workspace/changed_dirs.txt"
 while read -r line; do
