@@ -3,6 +3,7 @@ filename="/workspace/changed_dirs.txt"
 while read -r line; do
     dir="$line"
     if [ $dir == "." ];then
+        echo "No pipelines updated or added"
         break
     fi
     echo "new pipeline in - $dir"
