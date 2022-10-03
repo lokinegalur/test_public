@@ -2,6 +2,7 @@ steps:
 # fetch history
 - name: gcr.io/cloud-builders/git
   args: ['fetch', '--unshallow']
+  
 # Find the directories added or updated
 - name: gcr.io/cloud-builders/git
   entrypoint: bash
