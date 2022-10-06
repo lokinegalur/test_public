@@ -1,1 +1,0 @@
---gcs-location gs://csv_to_bigquery_load_1/Template_wordcount
