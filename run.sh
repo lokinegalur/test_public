@@ -1,7 +1,7 @@
 #!/bin/bash
-filename="/workspace/changed_dirs.txt"  #p1, p2
+filename="/workspace/changed_dirs.txt"
 while read -r line; do
-    dir="$line" #p1
+    dir="$line"
     if [ $dir == "." ];then
         echo "No pipelines updated or added"
         break
