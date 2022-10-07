@@ -1,0 +1,8 @@
+--runner DataflowRunner
+--project aesthetic-genre-356605
+--input gs://csv_to_bigquery_load_1/count_me.txt.txt
+--output gs://csv_to_bigquery_load_1/output.txt
+--staging_location gs://csv_to_bigquery_load_1/Staging
+--temp_location gs://csv_to_bigquery_load_1/Temp
+--template_location gs://csv_to_bigquery_load_1/Template_wordcount_3 
+--region us-central1
