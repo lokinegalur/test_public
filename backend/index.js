@@ -15,7 +15,7 @@ const db = mysql.createConnection({
     password: db_password,
     database: database
 })
-console.log(db_user)
+console.log(process.env)
 app.get("/",(req,res)=>{
     res.json("hello this is the backend")
 })
