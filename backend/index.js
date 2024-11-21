@@ -1,9 +1,9 @@
 import express from "express"
 import mysql from "mysql"
+import process from 'node:process'
 const app = express()
 
 // DATABASE CONNECTION DETAILS
-const process = require("node:process")
 const db_host = process.env.DB_HOST;
 const db_port = process.env.DB_PORT;
 const db_user = process.env.DB_USER
@@ -15,7 +15,7 @@ const db = mysql.createConnection({
     password: db_password,
     database: database
 })
-
+console.log(db_user)
 app.get("/",(req,res)=>{
     res.json("hello this is the backend")
 })
