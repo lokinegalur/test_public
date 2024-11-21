@@ -3,7 +3,6 @@ import mysql from "mysql"
 const app = express()
 
 // DATABASE CONNECTION DETAILS
-const process = require("node:process")
 const db_host = process.env.DB_HOST;
 const db_port = process.env.DB_PORT;
 const db_user = process.env.DB_USER
