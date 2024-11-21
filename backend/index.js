@@ -17,7 +17,7 @@ const db = mysql.createConnection({
     password: db_password,
     database: database
 })
-console.log(process.env)
+// console.log(process.env)
 app.get("/",(req,res)=>{
     res.json("hello this is the backend")
 })
@@ -31,11 +31,11 @@ app.get("/books",(req,res)=>{
 })
 
 app.post("/books", (req, res) => {
-    const q = "INSERT INTO books(`title`, `desc`, `price`, `cover`) VALUES (?)";
+    const q = "INSERT INTO books(`title`, `description`, `price`, `cover`) VALUES (?)";
   
     const values = [
       req.body.title,
-      req.body.desc,
+      req.body.description,
       req.body.price,
       req.body.cover,
     ];
