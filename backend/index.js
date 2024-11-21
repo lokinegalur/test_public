@@ -1,11 +1,11 @@
 import express from "express"
 import mysql from "mysql"
-import path from "path"
+import dotenv from "dotenv"
 const app = express()
 
 // DATABASE CONNECTION DETAILS
 // const path = path()
-require('dotenv').config();
+dotenv.config();
 const db_host = process.env.DB_HOST;
 const db_port = process.env.DB_PORT;
 const db_user = process.env.DB_USER
