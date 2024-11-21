@@ -4,11 +4,11 @@ import { useState } from 'react'
 import axios from 'axios'
 
 const Books = () => {
-    const [books,setBooks] = useState([])
+    const [books,setBooks] = useState([]);
     useEffect(()=>{
         const fetchAllBooks = async ()=> {
             try{
-                const res = await axios.get("http://localhost:8800/books")
+                const res = await axios.get("http://localhost:8800/books");
                 console.log(res)
             }
             catch(err){
