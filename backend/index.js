@@ -4,6 +4,8 @@ import process from 'node:process'
 const app = express()
 
 // DATABASE CONNECTION DETAILS
+const path = require('path')
+require('dotenv').config({ path: path.resolve(__dirname, '.env') })
 const db_host = process.env.DB_HOST;
 const db_port = process.env.DB_PORT;
 const db_user = process.env.DB_USER
