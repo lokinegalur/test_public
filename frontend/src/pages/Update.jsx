@@ -1,11 +1,11 @@
 import React from 'react'
 
 const Update = () => {
-    return {
+    return (
         <div>
         Update
         </div>
-    }
+    )
 }
 
 export default Update
