@@ -1,5 +1,6 @@
 import express from "express"
 import mysql from "mysql"
+import process from 'node:process'
 const app = express()
 
 // DATABASE CONNECTION DETAILS
@@ -14,7 +15,7 @@ const db = mysql.createConnection({
     password: db_password,
     database: database
 })
-
+console.log(db_user)
 app.get("/",(req,res)=>{
     res.json("hello this is the backend")
 })
