@@ -18,6 +18,7 @@ const db = mysql.createConnection({
 })
 // console.log(process.env)
 
+// express middleware to parse json
 app.use(express.json())
 
 app.get("/",(req,res)=>{
