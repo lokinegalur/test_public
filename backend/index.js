@@ -1,6 +1,8 @@
 import express from "express"
 import mysql from "mysql"
 import dotenv from "dotenv"
+import cors from "cors"
+
 const app = express()
 
 // DATABASE CONNECTION DETAILS
@@ -20,6 +22,9 @@ const db = mysql.createConnection({
 
 // express middleware to parse json
 app.use(express.json())
+
+// cors 
+app.use(cors())
 
 app.get("/",(req,res)=>{
     res.json("hello this is the backend")
