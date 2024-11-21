@@ -4,7 +4,6 @@ import dotenv from "dotenv"
 const app = express()
 
 // DATABASE CONNECTION DETAILS
-// const path = path()
 dotenv.config();
 const db_host = process.env.DB_HOST;
 const db_port = process.env.DB_PORT;
@@ -18,6 +17,9 @@ const db = mysql.createConnection({
     database: database
 })
 // console.log(process.env)
+
+app.use(express.json())
+
 app.get("/",(req,res)=>{
     res.json("hello this is the backend")
 })
