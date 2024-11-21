@@ -5,7 +5,7 @@ const app = express()
 
 // DATABASE CONNECTION DETAILS
 // const path = path()
-require('dotenv').config({ path: path.resolve(__dirname, '.env') })
+require('dotenv').config();
 const db_host = process.env.DB_HOST;
 const db_port = process.env.DB_PORT;
 const db_user = process.env.DB_USER
